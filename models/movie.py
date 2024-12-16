@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from models.base import Base
+from models.movie_actors import movie_actors
 
 
 # Movie model
