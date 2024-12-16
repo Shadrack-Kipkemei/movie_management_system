@@ -15,3 +15,26 @@ class Movie(Base):
     # Relationships
     director = relationship('Director', back_populates='movies')
     actors = relationship('Actor', secondary=movie_actors, back_populates='movies')
+
+    @classmethod
+    def create(cls, session, title, release_year, director_id):
+        movie = cls(title=title, release_year=release_year, director_id=director_id)
+        session.add(movie)
+        session.commit()
+        return movie
+
+    @classmethod
+    def get_all(cls, session):
+        return session.query(cls).all()
+
+    @classmethod
+    def find_by_id(cls, session, movie_id):
+        return session.query(cls).get(movie_id)
+
+    @classmethod
+    def delete(cls, session, movie_id):
+        movie = cls.find_by_id(session, movie_id)
+        if movie:
+            session.delete(movie)
+            session.commit()
+

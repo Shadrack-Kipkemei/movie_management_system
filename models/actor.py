@@ -12,3 +12,25 @@ class Actor(Base):
 
     # Relationship with movie (association table)
     movies = relationship('Movie', secondary=movie_actors, back_populates='actors')
+
+    @classmethod
+    def create(cls, session, name):
+        actor = cls(name=name)
+        session.add(actor)
+        session.commit()
+        return actor
+
+    @classmethod
+    def get_all(cls, session):
+        return session.query(cls).all()
+
+    @classmethod
+    def find_by_id(cls, session, actor_id):
+        return session.query(cls).get(actor_id)
+
+    @classmethod
+    def delete(cls, session, actor_id):
+        actor = cls.find_by_id(session, actor_id)
+        if actor:
+            session.delete(actor)
+            session.commit()
