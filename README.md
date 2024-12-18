@@ -1,5 +1,7 @@
 ## Movie Management System
 
+# Date, 2024/12/18 By Shadrack Kipkemei
+
 A simple command-line movie management system built with SQLAlchemy, which allows users to manage movies, actors, and directors in a relational database. The system supports operations such as adding, listing, and deleting movies, actors, and directors, as well as associating actors with movies.
 
 ## Features
