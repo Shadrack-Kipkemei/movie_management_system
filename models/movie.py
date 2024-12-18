@@ -37,4 +37,3 @@ class Movie(Base):
         if movie:
             session.delete(movie)
             session.commit()
-
