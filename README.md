@@ -20,14 +20,24 @@ A simple command-line movie management system built with SQLAlchemy, which allow
 
 ## Requirements
 
-* Python 3.7 or higher
+* Python 3.x
 * SQLAlchemy
 * SQLite (or any SQL database supported by SQLAlchemy)
 
-## Install dependencies
+## Installation
+Follow these steps to set up the project on your local machine:
+1. Clone the repository:
+```git clone https://github.com/yourusername/movie-management-system.git
+cd movie-management-system
+```
+2. Create a Virtual Environment
+```pipenv install```
+3. Activate the Virtual Environment
+```pipenv shell```
+4. Install dependencies
 You can install the required Python packages using pip:
 
-pip install sqlalchemy
+```pip install sqlalchemy```
 
 ## Database Setup
 
@@ -78,7 +88,7 @@ To use this system, simply create the tables using the appropriate Base.metadata
 ## Running the Application
 To run the application, execute the cli.py file. This file provides a command-line interface to manage the movies, actors, and directors in the database.
 
-python cli.py
+```python cli.py```
 
 # Available Commands:
 1. Add Movie: Adds a new movie along with the director.
