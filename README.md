@@ -27,8 +27,10 @@ A simple command-line movie management system built with SQLAlchemy, which allow
 ## Installation
 Follow these steps to set up the project on your local machine:
 1. Clone the repository:
-```git clone https://github.com/yourusername/movie-management-system.git```
-```cd movie-management-system```
+```
+git clone https://github.com/yourusername/movie-management-system.git
+cd movie-management-system
+```
 2. Create a Virtual Environment
 
 ```pipenv install```
